@@ -1,0 +1,12 @@
+This code is built on top of a few different libraries. 
+{Dependencies}
+
+  1.cv2
+  2.numpy
+  3.glob
+  4.python_yt_uploader(included in git source)
+  5.movipy\
+
+This program collects all videos with names formated as "2022 *.mp4" 
+modify path variable to the directory that the clips are stored.
+modify the variable clip2 = mp.VideoFileClip('YourAudioClip.mp4') ---> on line 55
