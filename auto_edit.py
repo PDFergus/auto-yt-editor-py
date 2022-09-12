@@ -16,7 +16,7 @@ class Uploader:
         #pass
     def main (self):#grabs all mp4 in local directory
 
-        path = 'N:\VIDEOS\VODS\clips'
+        path = 'C:\your\path\here'
         files = glob.glob(path +r'/'+'2022''*'+'.mp4')
         print(files)
         print('files are being prepared for upload' )
@@ -52,7 +52,7 @@ class Uploader:
         videoclip = VideoFileClip(new_name)
         avclip = videoclip.set_audio(audioclip)
         avclip.write_videofile(new_name+"_sound"+'.mp4')
-        clip2 = mp.VideoFileClip('FollowAlert.mp4')
+        clip2 = mp.VideoFileClip('YourAudioClip.mp4')
 
         final_clip = concatenate_videoclips([clip2, avclip])
         final_clip.write_videofile(new_name + '_final.mp4')
@@ -63,7 +63,7 @@ class Uploader:
         self._post(self)
 
     def add_intro_outro (self, clip, avclip,new_name,file):
-        clip2 = mp.VideoFileClip('FollowAlert.mp4')
+        clip2 = mp.VideoFileClip('YourAudioClip.mp4')
         av_clip = clip.set_audio(avclip)
         final_clip = concatenate_videoclips([clip2,av_clip])
         final_clip.write_videofile(new_name+'_final.mp4')
